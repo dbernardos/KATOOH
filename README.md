@@ -93,7 +93,7 @@ ainda não pronto
 
 Equipe responsável pelo desenvolvimento do projeto
 
-| [<img src="./img/lara.png" width=115><br><sub>Joseph S. Alexandre</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Lorenzo V. Bonas</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Lucas ??</sub>](https://github.com/Diana-ops) | [<img src="./ApuriShare-doc/img/estela.jpeg" width=115><br><sub>Vitor Ramos</sub>](https://github.com/Diana-ops) | [<img src="./ApuriShare-doc/img/davi.jpeg" width=115><br><sub>Davi Bernardo</sub>](https://github.com/Diana-ops) |
+| [<img src="https://avatars.githubusercontent.com/u/160176206?v=4" width=115><br><sub>Joseph Alexandre</sub>](https://github.com/josephsalexandre) |  [<img src="https://avatars.githubusercontent.com/u/133878897?v=4" width=115><br><sub>Lorenzo Bonalume</sub>](https://github.com/vbonas) |  [<img src="https://avatars.githubusercontent.com/u/116983819?v=4" width=115><br><sub>Lucas Rabello</sub>](https://github.com/megwazi) | [<img src="https://avatars.githubusercontent.com/u/160809251?v=4" width=115><br><sub>Vitor Ramos</sub>](https://github.com/hakkita) | [<img src="https://avatars.githubusercontent.com/u/121075844?v=4" width=115><br><sub>Davi Bernardo</sub>](https://github.com/dbernardos) |
 | :---: | :---: | :---: | :---:| :---:
 
 ## Licença 
