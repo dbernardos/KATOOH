@@ -45,20 +45,13 @@
 <body>
     <div class="container">
         <h2>Login KATOOH</h2>
-        <div class="row">
-            <div class="col-xs-6 text-right">
-                <form action="#">
-                    <input type="text" id="email" name="email" placeholder="Email" required><br>
-                    <input type="password" id="senha" name="senha" placeholder="Senha" required><br>
-                    <input type="submit" value="Logar">
-                </form>
-            </div>
-            <div class="col-xs-6 text-left">
-                <form action="telaCadastro.php">
-                    <input type="submit" value="Cadastrar">
-                </form>
-            </div>
-        </div>
+        
+            <form action="#">
+                <input type="text" id="email" name="email" placeholder="Email" required><br>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required><br>
+                <input type="submit" value="Logar">
+                <a href="telaCadastro.php">Cadastrar</a>
+            </form>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
