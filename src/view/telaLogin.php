@@ -54,7 +54,11 @@
                     </tr>
                     <tr>
                         <td><input type="submit" value="Login" id=""></td>
-                        <td><input type="submit" value="Cadastrar" id=""></td>                        
+                        <td>
+                            <form action="telaCadastro.php" method="post">
+                                <input type="submit" value="Cadastrar">
+                            </form>
+                        </td>                         
                     </tr>
                 </table>
             </fieldset>
