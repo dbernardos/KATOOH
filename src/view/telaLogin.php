@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login KATOOH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
             background-color: #610B5E;
@@ -44,11 +45,21 @@
 <body>
     <div class="container">
         <h2>Login KATOOH</h2>
-        <form action="#">
-            <input type="email" id="email" name="email" placeholder="Email" required><br>
-            <input type="password" id="senha" name="senha" placeholder="Senha" required><br>
-            <input type="submit" value="Entrar">
-        </form>
+        <div class="row">
+            <div class="col-xs-6 text-right">
+                <form action="#">
+                    <input type="text" id="email" name="email" placeholder="Email" required><br>
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required><br>
+                    <input type="submit" value="Logar">
+                </form>
+            </div>
+            <div class="col-xs-6 text-left">
+                <form action="telaCadastro.php">
+                    <input type="submit" value="Cadastrar">
+                </form>
+            </div>
+        </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
