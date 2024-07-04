@@ -42,48 +42,13 @@
 </head>
 
 <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main>
-            <fieldset>
-                <table>
-                    <th colspan="2" class="center">Atenticação</th>
-                    <tr>
-                        <td>Login:</td>
-                        <td><input type="text" id=""></td>   
-                    </tr>
-                    <tr>
-                        <td>Senha:</td>
-                        <td><input type="password" id=""></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Login" id=""></td>
-                        <td>
-                            <form action="telaCadastro.php" method="post">
-                                <input type="submit" value="Cadastrar">
-                            </form>
-                        </td>                         
-                    </tr>
-                </table>
-            </fieldset>
-            
-
-        </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <div class="container">
+        <h2>Cadastro KATOOH</h2>
+        <form action="#">
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required><br>
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
+</body>
 </html>
