@@ -3,6 +3,24 @@
     <head>
         <title>Login</title>
         <!-- Required meta tags -->
+        <style>
+            table {
+                width: 50%;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 10px;
+                border: 1px solid #ddd;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            .center {
+                text-align: center;
+            }
+        </style>
         <meta charset="utf-8" />
         <meta
             name="viewport"
@@ -25,18 +43,18 @@
         <main>
             <fieldset>
                 <table>
-                    <thead></thead>
+                    <th colspan="2" class="center">Atenticação</th>
                     <tr>
-                        <th><label for="login">Login:</label></th>
-                        <th><input type="text" id=""></th>   
+                        <td>Login:</td>
+                        <td><input type="text" id=""></td>   
                     </tr>
                     <tr>
-                        <th><label for="password">Senha:</label></th>
-                        <th><input type="password" id=""></th>
+                        <td>Senha:</td>
+                        <td><input type="password" id=""></td>
                     </tr>
                     <tr>
-                        <th><input type="button" value="Login" id=""></th>
-                        <th><input type="button" value="Cadastrar" id=""></th>                        
+                        <td><input type="submit" value="Login" id=""></td>
+                        <td><input type="submit" value="Cadastrar" id=""></td>                        
                     </tr>
                 </table>
             </fieldset>
