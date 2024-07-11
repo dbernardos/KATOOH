@@ -53,33 +53,58 @@
         body {
             background-color: #610B5E;
         }
+        .col{
+            text-align: center;
+        }
     </style>
 </head>
 
 
-
+<div class="row">
+            <div class="col">
+                <br><br>
+            </div>
+        </div>
 <div class="container">
     <form class="custom-form">
+        <div class="row"> 
+            <div class="col">
         <div class="mb-3">
             <label for="usuario" class="form-label">Usuário</label>
             <input type="text" class="form-control" id="usuario"  placeholder="Insira um nome de usuário" autofocus required>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" placeholder="Insira um e-mail válido">
+            <input type="email" class="form-control" id="cadEmail" placeholder="Insira um e-mail válido">
         </div>
         <div class="mb-3">
             <label for="senha" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="senha" placeholder="Insira uma senha válida">
+            <input type="password" class="form-control" id="cadSenha" placeholder="Insira uma senha válida">
         </div>
         <div class="mb-3">
             <label for="confSenha" class="form-label">Confirmar senha</label>
             <input type="password" class="form-control" id="confSenha" placeholder="Confirme a sua senha">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+        </div>
+    </div>
     </form>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
 
 <!--<body>
     <div class="container">
