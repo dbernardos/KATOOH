@@ -30,7 +30,7 @@ foreach ($sqlCommands as $command) {
         if ($conn->query($command) === false) {
             echo "Erro ao executar comando: " . $conn->error . "<br>";
         } else {
-            echo "Comando executado com sucesso: $command<br>";
+            echo "Comando executado com sucesso:<br> $command<br>";
         }
     }
 }
