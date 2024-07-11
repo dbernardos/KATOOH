@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['usuario'];
     $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT, ['cost' => 12]);
     $confirmar_senha = $_POST['confirmar_senha'];
 
     // Validação do email
@@ -41,16 +41,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Erro: O usuário ou email já está em uso.");
         }
 
-        $dataCriacao = date('Y-m-d H:i:s');
-        $hashed_password = password_hash($senha, PASSWORD_DEFAULT);
+        //$dataCriacao = date('Y-m-d H:i:s');
+        //$hashed_password = password_hash($senha, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO usuario (nome, email, senha, dataCriacao, dataAtualizacao) VALUES (:nome, :email, :senha, :dataCriacao, :dataCriacao)";
+        $sql = "INSERT INTO usuario (nome, email, senha) VALUES (:nome, :email, :senha)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $hashed_password);
-        $stmt->bindParam(':dataCriacao', $dataCriacao);
-        $stmt->bindParam(':dataAtualizacao', $dataCriacao);
+        $stmt->bindParam(':senha', $senha);
         $stmt->execute();
 
         echo "Cadastro realizado com sucesso!";
