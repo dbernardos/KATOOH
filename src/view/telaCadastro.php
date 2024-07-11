@@ -75,11 +75,11 @@
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" placeholder="Insira um e-mail válido">
+            <input type="email" class="form-control" id="cadEmail" placeholder="Insira um e-mail válido">
         </div>
         <div class="mb-3">
             <label for="senha" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="senha" placeholder="Insira uma senha válida">
+            <input type="password" class="form-control" id="cadSenha" placeholder="Insira uma senha válida">
         </div>
         <div class="mb-3">
             <label for="confSenha" class="form-label">Confirmar senha</label>

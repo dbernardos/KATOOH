@@ -46,8 +46,8 @@
     <div class="container">
         <h2>Login KATOOH</h2>
             <form action="#">
-                <input type="text" id="email" name="email" placeholder="Email" required><br>
-                <input type="password" id="senha" name="senha" placeholder="Senha" required><br>
+                <input type="text" id="logEmail" name="email" placeholder="Email" required><br>
+                <input type="password" id="logSenha" name="senha" placeholder="Senha" required><br>
                 <input type="submit" value="Logar">
                 <a href="telaCadastro.php">Cadastrar</a>
             </form>
