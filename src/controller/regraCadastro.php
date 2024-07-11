@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Verificação se o usuário já existe
-    $host = 'localhost';0
+    $host = 'localhost';
     $dbname = 'mydb'; 
     $username = 'usuario';
     $password = 'senha';
