@@ -32,7 +32,7 @@ if (filter_input(INPUT_SERVER, "REQUEST_METHOD") === "POST") {
             }
         }
 
-        header("Location: telaPrincipal.php");
+        header("Location: ../view/telaPrincipal.php");
     } catch (Exception $e) {
         $erros[] = $e->getMessage();
         $_SESSION["erros"] = $erros;
