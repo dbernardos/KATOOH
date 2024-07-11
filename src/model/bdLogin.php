@@ -22,6 +22,8 @@ if (filter_input(INPUT_SERVER, "REQUEST_METHOD") === "POST") {
         if (!$resultado) {
             throw new Exception("Login inválido!");
         } else {
+            //$senha = password_hash($senha, PASSWORD_BCRYPT, ['cost' => 12]);
+            //error_log("\n senha: '$senha' e '$aaa'", 3, "../file.log");
             if (password_verify($senha, $resultado["senha"]) === false) {
                 throw new Exception("Senha inválida!");
             } else {

@@ -3,7 +3,7 @@
 $USER = "root";
 $SENHA = "";
 $DSN = "mysql:dbname=mydb;host=localhost";
-$SERVIDOR = "localhost:8081";
+$SERVIDOR = "localhost:3306";
 $BANCO = "mydb";
 
 try{
