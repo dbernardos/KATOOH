@@ -1,6 +1,10 @@
 -- MySQL Script generated
 -- Sun Jul  7 00:35:58 2024
 
+CREATE DATABASE IF NOT EXISTS `mydb`;
+
+USE `mydb`;
+
 -- -----------------------------------------------------
 -- Table `mydb`.`Usuario`
 -- -----------------------------------------------------
