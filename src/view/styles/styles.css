@@ -6,7 +6,7 @@
     margin: auto; 
     }
     body {
-        background-color: #610B5E;
+        background-color: #9d0000;
     }
     .col{
         text-align: center;
@@ -24,4 +24,14 @@
         eight: auto; 
         display: block;
         text-align: center;
+    }
+    .oval-header{
+        background-color: #9d0000; /* Cor de fundo do header */
+        color: white; /* Cor do texto */
+        padding: 20px; /* Espaçamento interno */
+        text-align: center; /* Centralizar texto */
+        position: relative; /* Posição relativa para permitir posicionamento absoluto do conteúdo */
+        overflow: hidden; /* Esconde qualquer conteúdo que exceda as bordas arredondadas */
+        height: 200px; /* Altura do header */
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
     }
