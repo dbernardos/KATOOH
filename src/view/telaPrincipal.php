@@ -15,6 +15,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Katooh</a>
+        <img src="https://github.com/dbernardos/KATOOH/blob/108dba25350d563ee0e6ac24f2c537dac823058d/src/view/img/K.svg">
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
