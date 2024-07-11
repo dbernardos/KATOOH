@@ -1,6 +1,3 @@
-<?php
-//require "/src/model/bdLogin.php";
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -46,9 +43,11 @@
 </head>
 
 <body>
+    <div><?php include_once("../model/bdLogin.php"); ?>
+</div>
     <div class="container">
         <h2>Login KATOOH</h2>
-            <form action="../model/bdLogin.php" method = "POST">
+            <form action="telaLogin.php" method = "POST">
                 <input type="text" id="logEmail" name="email" placeholder="Email" required><br>
                 <input type="password" id="logSenha" name="senha" placeholder="Senha" required><br>
                 <input type="submit" value="Logar">

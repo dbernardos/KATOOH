@@ -41,16 +41,3 @@ if (filter_input(INPUT_SERVER, "REQUEST_METHOD") === "POST") {
     }
 }
 ?>
-
-<?php
-        if (isset($_SESSION["erros"])) {
-            echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>";
-            echo "<button type='button' class='btn-close btn-sm' data-bs-dismiss='alert'
-                aria-label='Close'></button>";
-            foreach ($_SESSION["erros"] as $chave => $valor) {
-                echo $valor . "<br>";
-            }
-            echo "</div>";
-        }
-        unset($_SESSION["erros"]);
-        ?>
