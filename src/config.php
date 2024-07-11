@@ -2,7 +2,7 @@
 
 $USERBD = "root";
 $SENHABD = "";
-$DSN = "mysql:dbname=banco_katooh;host=localhost";
+$DSN = "mysql:dbname=mydb;host=localhost";
 
 try{
     $pdo = new PDO($DSN, $USERBD, $SENHABD);
