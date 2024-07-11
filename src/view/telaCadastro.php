@@ -62,7 +62,7 @@
 
 <div class="row">
             <div class="col">
-                <br><br>
+                <br><img src="../view/img/K.svg"><br>
             </div>
         </div>
 <div class="container">
