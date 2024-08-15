@@ -22,6 +22,15 @@
             background-color: #7e0909;
             
         }
+        a{
+            color: inherit;
+            text-align: center;
+            padding: 10px;
+        }
+        .btSprd{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
         .container{
             padding-top: 25px;
         }
@@ -240,7 +249,7 @@
         .comic-button {
         display: inline-block;
         padding: 2px 20px;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
@@ -251,6 +260,7 @@
         box-shadow: 5px 5px 0px #000;
         transition: all 0.3s ease;
         cursor: pointer;
+        width: 110px; 
         }
 
         .comic-button:hover {
@@ -360,9 +370,12 @@
                             <label class="brutalist-label">Senha</label>
                         </div>
                     </div>
-                    <button type="submit" class="comic-button">Entrar</button>
+                    <div class="btSprd">
+                        <a href="telaCadastro.php" class="comic-button">Cadastrar</a>
+                        <button type="submit" class="comic-button">Entrar</button>
+                    </div>
                 </div>
-                <a href="telaCadastro.php" class="comic-button">Cadastrar</a>
+                <a href="#"><p><u>Redefinir senha</u></p></a>
                 <!--<button type="submit" class="comic-button">Redefinir senha</button>-->
             </div>
         </form>

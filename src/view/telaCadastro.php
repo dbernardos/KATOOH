@@ -22,6 +22,16 @@
             background-color: #7e0909;
             
         }
+        a{
+            font-weight: bold;
+            color: inherit;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+        }
+        p{
+            padding-top: 20px;
+        }
         .container{
             padding-top: 25px;
         }
@@ -239,8 +249,8 @@
 
         .comic-button {
         display: inline-block;
-        padding: 2px 20px;
-        font-size: 18px;
+        padding: 2px 10px;
+        font-size: 15px;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
@@ -251,6 +261,7 @@
         box-shadow: 5px 5px 0px #000;
         transition: all 0.3s ease;
         cursor: pointer;
+        width: 110px; 
         }
 
         .comic-button:hover {
@@ -378,7 +389,8 @@
                             <label class="brutalist-label">Confirmar Senha</label>
                         </div>
                     </div>
-                    <button type="submit" class="comic-button">Cadastrar</button>
+                    <button type="submit" class="comic-button">Cadastre-se</button>
+                    <p>Já possui conta? <a href="telaLogin.php"><u>Entrar</u></p></a>
                 </div>
             </div>
         </form>
