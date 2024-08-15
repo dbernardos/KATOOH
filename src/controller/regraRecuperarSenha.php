@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "mydb");
+require_once("../config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['email'])) {
@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $token = bin2hex(random_bytes(50));
             $mysqli->query("INSERT INTO NovaSenha (email, token) VALUES ('$email', '$token')");
 
-            $resetLink = "http://dominio.com/telaRecuperarSenha.php?token=" . $token;
+            $resetLink = "http://localhost/KATOOH/src/controller/telaRecuperarSenha.php?token=" . $token;
             $subject = "Solicitação de Redefinição de Senha";
             $message = "Clique no link a seguir para redefinir sua senha: $resetLink";
-            $headers = "Para: noreply@localhost.com";
+            $headers = "Para: recuperarsenhakatooh@gmail.com";
 
             mail($email, $subject, $message, $headers);
             echo "Um link de redefinição foi enviado para o seu endereço de e-mail.";
@@ -42,21 +42,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     if (isset($_GET['token'])) {  ////Arrumar parte HTML ////
-        // Mostra formulário de redefinição
+        // Mostrar formulário de redefinição
         $token = $_GET['token'];
-        echo '<form action="combined_reset.php" method="post">
+        echo '<form action="telaRecuperarSenha.php" method="post" onsubmit="return validatePassword()">
                 <input type="hidden" name="token" value="' . htmlspecialchars($token) . '">
-                <label for="password">Digite sua nova senha:</label>
-                <input type="password" id="novaSenha" name="novaSenha" required>
-                <button type="submit">Reset Password</button>
+                <div class="mb-3">
+                    <label for="novaSenha" class="form-label">Digite sua nova senha:</label>
+                    <input type="password" id="novaSenha" name="novaSenha" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirmarSenha" class="form-label">Confirme sua nova senha:</label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Redefinir Senha</button>
               </form>';
     } else {
-        // Mostra formulário de solicitação 
-        echo '<form action="combined_reset.php" method="post">
+        // Mostrar formulário de solicitação de link de redefinição
+        echo '<form action="telaRecuperarSenha.php" method="post">
                 <label for="email">Digite seu endereço de e-mail:</label>
                 <input type="email" id="email" name="email" required>
-                <button type="submit">Enviar Link de Redefinição</button>
+                <button type="submit" class="btn btn-primary">Enviar Link de Redefinição</button>
               </form>';
     }
 }
 ?>
+
+<script>
+function validatePassword() {
+    const novaSenha = document.getElementById('novaSenha').value;
+    const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+    if (novaSenha !== confirmarSenha) {
+        alert('As senhas não coincidem. Por favor, tente novamente.');
+        return false;
+    }
+    return true;
+}
+</script>

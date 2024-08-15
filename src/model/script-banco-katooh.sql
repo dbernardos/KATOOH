@@ -108,3 +108,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Resposta` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`NovaSenha`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb` . `NovaSenha` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `email` VARCHAR(100) NOT NULL,
+  `token` VARCHAR(100) NOT NULL,
+  `data_requisicao` TIMESTAMP DEFAULT CURRENT_TIMESTAMP)
+ENGINE = InnoDB;
