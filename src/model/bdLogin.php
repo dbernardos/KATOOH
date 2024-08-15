@@ -29,6 +29,7 @@ if (filter_input(INPUT_SERVER, "REQUEST_METHOD") === "POST") {
             } else {
                 $_SESSION["usuario_id"] = $resultado["id"];
                 $_SESSION["usuario"] = $resultado["nome"];
+                $_SESSION["usuario"] = $resultado["email"];
             }
         }
 

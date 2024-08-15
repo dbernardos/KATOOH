@@ -1,3 +1,4 @@
+<?php require_once("../model/bdLogin.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -321,7 +322,6 @@
 </head>
 
 <body>
-    <?php include_once("../model/bdLogin.php"); ?>
     <header class="oval-header">
         <div class="row">
             <div class="colunaImagem">
@@ -331,7 +331,7 @@
     </header>
     
     <div class="container">
-        <form class="custom-form">
+        <form class="custom-form" action="telaLogin.php" method = "POST">
             <div class="row"> 
                 <div class="col">
                     <div class="mb-3">
@@ -354,6 +354,7 @@
                                 placeholder="Insira sua Senha"
                                 class="brutalist-input smooth-type"
                                 type="password"
+                                name="senha"
                                 id="logSenha"
                             />
                             <label class="brutalist-label">Senha</label>
@@ -361,7 +362,8 @@
                     </div>
                     <button type="submit" class="comic-button">Entrar</button>
                 </div>
-                <button type="submit" class="comic-button">Redefinir senha</button>
+                <a href="telaCadastro.php" class="comic-button">Cadastrar</a>
+                <!--<button type="submit" class="comic-button">Redefinir senha</button>-->
             </div>
         </form>
     </div>
