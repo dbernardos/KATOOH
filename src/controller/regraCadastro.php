@@ -1,9 +1,11 @@
 <?php
+require_once("../config.php");
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['usuario'];
-    $email = $_POST['email'];
-    $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT, ['cost' => 12]);
-    $confirmar_senha = $_POST['confirmar_senha'];
+    $email = $_POST['cadEmail'];
+    $senha = $_POST['cadSenha'];
+    $confirmar_senha = $_POST['confSenha'];
 
     // Validação do email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -20,15 +22,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Erro: As senhas não coincidem.");
     }
 
+    //Criptografa a senha   
+    $senha_hash = password_hash($senha, PASSWORD_BCRYPT, ['cost' => 12]);
+
     // Verificação se o usuário já existe
-    $host = 'localhost';
+    /* $host = 'localhost';
     $dbname = 'mydb'; 
-    $username = 'usuario';
-    $password = 'senha';
+    $username = 'root';
+    $password = ''; */
 
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        /* $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); */
                                                                                                  
         // Verificar se o usuário ou email já existem
         $sql = "SELECT COUNT(*) FROM usuario WHERE nome = :nome OR email = :email";
@@ -41,14 +46,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Erro: O usuário ou email já está em uso.");
         }
 
-        //$dataCriacao = date('Y-m-d H:i:s');
-        //$hashed_password = password_hash($senha, PASSWORD_DEFAULT);
-
         $sql = "INSERT INTO usuario (nome, email, senha) VALUES (:nome, :email, :senha)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $senha);
+        $stmt->bindParam(':senha', $senha_hash);
         $stmt->execute();
 
         echo "Cadastro realizado com sucesso!";
