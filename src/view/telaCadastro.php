@@ -11,15 +11,19 @@
 
     <style>
         .custom-form {
-        background-color: white;
-        border-radius: 10px;
-        padding: 20px;
-        max-width: 25%; 
-        margin: auto; 
-        padding-top: 40px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 25%; 
+            margin: auto; 
+            padding-top: 40px;
         }
         body {
             background-color: #7e0909;
+            
+        }
+        .container{
+            padding-top: 25px;
         }
         .col{
             text-align: center;
