@@ -8,7 +8,7 @@ $BANCO = "mydb";
 
 try{
     $pdo = new PDO($DSN, $USER, $SENHA);
-    //echo "Sucesso na conexão";
+    echo "Sucesso na conexão";
 } catch(PDOException $e){
     echo "Falha na conexão com o banco de dados: " . $e->getMessage();
     die();

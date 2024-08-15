@@ -342,7 +342,7 @@
 <!--Novo Menu-->
 
     <div class="container">
-        <form class="custom-form">
+        <form class="custom-form" action="../controller/regraCadastro.php" method="POST">>
             <div class="row"> 
                 <div class="col">
                     <div class="mb-3">
@@ -352,6 +352,7 @@
                                 class="brutalist-input smooth-type"
                                 type="text"
                                 id="usuario"
+                                name="usuario"
                             />
                             <label class="brutalist-label">Usuário</label>
                         </div>
@@ -363,6 +364,7 @@
                                 class="brutalist-input smooth-type"
                                 type="email"
                                 id="cadEmail"
+                                name="cadEmail"
                             />
                             <label class="brutalist-label">E-Mail</label>
                         </div>
@@ -374,6 +376,7 @@
                                 class="brutalist-input smooth-type"
                                 type="password"
                                 id="cadSenha"
+                                name="cadSenha"
                             />
                             <label class="brutalist-label">Senha</label>
                         </div>
@@ -385,6 +388,7 @@
                                 class="brutalist-input smooth-type"
                                 type="password"
                                 id="confSenha"
+                                name="confSenha"
                             />
                             <label class="brutalist-label">Confirmar Senha</label>
                         </div>
