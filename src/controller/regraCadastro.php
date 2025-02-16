@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //Criptografa a senha   
     $senha_hash = password_hash($senha, PASSWORD_BCRYPT, ['cost' => 12]);
-
+    //$senha_hash = password_hash($senha, PASSWORD_DEFAULT);
     // Verificação se o usuário já existe
     /* $host = 'localhost';
     $dbname = 'mydb'; 

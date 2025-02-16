@@ -18,7 +18,7 @@ if (filter_input(INPUT_SERVER, "REQUEST_METHOD") === "POST") {
         ));
 
         $resultado = $pre->fetch();
-
+        
         if (!$resultado) {
             throw new Exception("Login inválido!");
         } else {
